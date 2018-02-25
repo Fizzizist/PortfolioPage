@@ -1,0 +1,64 @@
+html{
+    scroll-behavior: smooth;
+}
+button{
+    background: rgba(0,0,0,.0);
+
+}
+
+#home{
+    background-image: url("background1.jpg");
+
+}
+#mainLogo{
+    text-align: center;
+    color:orangered;
+    font-size: 75px;
+    font-weight:bold;
+    padding-top: 20%;
+}
+#mainSubHead{
+    text-align: center;
+    color:white;
+}
+#about{
+    background-color: #2d3b51;
+}
+#me{
+    border-radius: 25%;
+    margin-top:10%;
+    margin-bottom: 10%;
+}
+#topBar{
+    width:75%;
+    left:50%;
+    text-align: center;
+    margin-left: -37.5%;
+    color:white;
+    position:fixed;
+}
+.topLinks{
+    color:white;
+    font-size: 50px;
+}
+#topLinksRow{
+    color:white;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    float:none;
+    width:25%;
+    padding-bottom: 30%;
+    padding-top:5%;
+}
+#aboutTitle{
+    color:white;
+    padding-top: 10%;
+}
+#aboutParagraph{
+    color:white;
+    font-size:20
+}
+.make-white{
+    color:white;
+}

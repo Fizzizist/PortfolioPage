@@ -1,22 +1,55 @@
 <html>
     <head>
-        <style>
-            .row{
-                padding-left: 25%;
-                padding-right: 25%;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     </head>
-    <body>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-3"><button class="btn btn-block"><b>Home</b></button></div>
-            <div class="col-md-3"><button class="btn btn-block"><b>About</b></button></div>
-            <div class="col-md-3"><button class="btn btn-block"><b>Portfolio</b></button></div>
-            <div class="col-md-3"><button class="btn btn-block"><b>Contact</b></button></div>
+    <body id="main">
+        <div id="home" class="container-fluid">
+            <div id="topBar" class="row">
+              <div class="col-md-3"><a class="make-white" href="#home"><button class="btn"><b>Home</b></button></a></div>
+            <div class="col-md-3"><a class="make-white" href="#about"><button class="btn"><b>About</b></button></a></div>
+            <div class="col-md-3"><button class="btn"><b>Portfolio</b></button></div>
+            <div class="col-md-3"><button class="btn"><b>Contact</b></button></div>
           </div>
+            <h1 id="mainLogo">GroupStack.net</h1>
+            <h2 id="mainSubHead">Home of Peter Vlasveld's Software Engineering<br> and Written Portfolio</h2>
+            <div id=topLinksRow class="row">
+                <div class="col-md-6"><a class="topLinks" href="https://github.com/Fizzizist"><i class="fa fa-github"></i></a></div>
+                <div class="col-md-6"><a class="topLinks" href="https://www.linkedin.com/in/peter-vlasveld-19756459/"><i class="fa fa-linkedin"></i></a></div>
+            </div>
         </div>
+        
+        <!--end of home section-->
+        
+        <div id="about" class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6"><img class="img-responsive" id="me" src="me.jpg"></div>
+                <div class="col-lg-6">
+                    <h2 id="aboutTitle">About Me</h2>
+                    <p id="aboutParagraph">I have had a passion for computers ever since I was very young. In my teenage years I was building PCs and making useless Java apps. After high school I went to college for computer science where I learned more Java and C. After college I decided that I was interested in Neuroscience, so I stopped programming for a while and studied Neuroscience and Philosophy at University. Old habits die hard though. Mid-way through University I started programming again and now that I have graduated I am back to doing the thing that I have always loved. Recently I have been getting more into C# and Web Development which I am very new to in comparison to Java, but I love to learn and my passion will always keep me going.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div style="padding-left: 2%" class="col-md-6 make-white">
+                    <h2>Contact Information</h2>
+                    <div style="width: 45%;" class="row">
+                        <div class="col-sm-6">
+                            <p>Email:<br>Phone:</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p>pvlasveld@mailfence.com<br>416-902-8061</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding:2%" class="col-md-6">
+                    <a href="#"><button style="background-color:grey; font-size: 20; font-weight:bold; padding: 2%" class="btn btn-block make-white">Resume <i class="fa fa-download"></i></button></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- end of about section -->
+        
+        
     </body>
 </html>
