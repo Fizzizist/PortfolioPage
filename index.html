@@ -4,21 +4,28 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     </head>
-    <body id="main">
-        <div id="home" class="container-fluid">
-            <div id="topBar" class="row">
-              <div class="col-md-3"><a class="make-white" href="#home"><button class="btn"><b>Home</b></button></a></div>
+    
+    <header>
+    <nav class="navbar navbar-fixed-top">
+        <div id="_nav" class="row">
+            <div class="col-md-3"><a class="make-white" href="#home"><button class="btn"><b>Home</b></button></a></div>
             <div class="col-md-3"><a class="make-white" href="#about"><button class="btn"><b>About</b></button></a></div>
-            <div class="col-md-3"><button class="btn"><b>Portfolio</b></button></div>
-            <div class="col-md-3"><button class="btn"><b>Contact</b></button></div>
-          </div>
+            <div class="col-md-3"><a class="make-white" href="#portfolio"><button class="btn"><b>Portfolio</b></button></a></div>
+            <div class="col-md-3"><a class="make-white" href="#contact"><button class="btn"><b>Contact</b></button></a></div>
+        </div>
+    </nav>
+
+    </header>
+    
+    <body id="main">
+        <section id="home">
             <h1 id="mainLogo">GroupStack.net</h1>
             <h2 id="mainSubHead">Home of Peter Vlasveld's Software Engineering<br> and Written Portfolio</h2>
             <div id=topLinksRow class="row">
                 <div class="col-md-6"><a class="topLinks" href="https://github.com/Fizzizist"><i class="fa fa-github"></i></a></div>
                 <div class="col-md-6"><a class="topLinks" href="https://www.linkedin.com/in/peter-vlasveld-19756459/"><i class="fa fa-linkedin"></i></a></div>
             </div>
-        </div>
+        </section>
         
         <!--end of home section-->
         
@@ -50,6 +57,36 @@
         
         <!-- end of about section -->
         
+        <div style="background-color: lightgrey;" id="portfolio" class="container-fluid">
+            <h1 style="text-align: center; padding-top: 3%;"><b>Portfolio</b></h1>
+            <div style="width: 90%; margin-left: 5%" class="row">
+                <div class="col-lg-6">
+                <h2>Logic 2018</h2>
+                    <h3><em>Written in C#</em></h3>
+                    <img class="center" src="Logic2018Screen.jpg">
+                    <p class="center">Logic 2018 is an educational game in which students solve symbolic logical derivations. The game is currently a command line game with an alpha build available <a href="http://groupstack.net/Logic2018">here</a><br>You can also check out the games source code on <a href="https://github.com/Fizzizist/Logic2018">GitHub</a></p>
+                </div>
+                <div class="col-lg-6">
+                <h2>Bootstrap Portfolio Page</h2>
+                    <h3><em>Written in HTML and CSS using Bootstrap</em></h3>
+                    <a href="portfolioHome.jpg"><img class="img-responsive center" src="portfolioHome.jpg"></a>
+                    <p class="center">The page that you are viewing right now was written and coded by me. It makes use of Bootstrap for responsive CSS, and the rest is HTML.</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- end of portfolio section -->
+        
+        <div id="contact" class="container-fluid">
+            <h1>Contact</h1>
+            <form>
+                <input type="text" placeholder="Name"><br>
+                <input type="text" placeholder="Email"><br>
+                <input type="text" placeholder="Message..."><br>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
         
     </body>
 </html>
