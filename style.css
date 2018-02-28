@@ -7,7 +7,7 @@ button{
 }
 
 #home{
-    background-image: url("background1.jpg");
+    background-image: url("images/background1.jpg");
 
 }
 #mainLogo{
@@ -33,12 +33,7 @@ button{
     width: 100%;
     position: fixed;
     top: 0;
-    overflow: hidden;
     
-}
-.navbar a{
-    
-    display: block;
 }
 #_nav {
     text-align: center;
