@@ -2,7 +2,10 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <script>
+            window.location = "#home";
+        </script>
     </head>
     
     <header>  
@@ -16,14 +19,15 @@
     </header>
     
     <body id="main">
-        <section id="home">
+        <div id="home" class="container-fluid">
             <h1 id="mainLogo">GroupStack.net</h1>
             <h2 id="mainSubHead">Home of Peter Vlasveld's Software Engineering<br> and Written Portfolio</h2>
             <div id=topLinksRow class="row">
-                <div class="col-md-6"><a class="topLinks" href="https://github.com/Fizzizist"><i class="fa fa-github"></i></a></div>
-                <div class="col-md-6"><a class="topLinks" href="https://www.linkedin.com/in/peter-vlasveld-19756459/"><i class="fa fa-linkedin"></i></a></div>
+                <div class="col-md-4"><a class="topLinks" href="https://github.com/Fizzizist"><i class="fab fa-github"></i></a></div>
+                <div class="col-md-4"><a class="topLinks" href="https://www.linkedin.com/in/peter-vlasveld-19756459/"><i class="fab fa-linkedin"></i></a></div>
+                <div class="col-md-4"><a class="topLinks" href="https://www.freecodecamp.org/fizzizist"><i class="fab fa-free-code-camp"></i></a></div>
             </div>
-        </section>
+        </div>
         
         <!--end of home section-->
         
@@ -48,7 +52,7 @@
                     </div>
                 </div>
                 <div style="padding:2%" class="col-md-6">
-                    <a href="#"><button style="background-color:grey; font-size: 20; font-weight:bold; padding: 2%" class="btn btn-block make-white">Resume <i class="fa fa-download"></i></button></a>
+                    <a href="CV.pdf"><button style="background-color:grey; font-size: 20; font-weight:bold; padding: 2%" class="btn btn-block make-white">Resume <i class="fa fa-download"></i></button></a>
                 </div>
             </div>
         </div>
@@ -61,7 +65,7 @@
                 <div class="col-lg-6">
                 <h2>Logic 2018</h2>
                     <h3><em>Written in C#</em></h3>
-                    <img class="center" src="images/Logic2018Screen.jpg">
+                    <a href="http://groupstack.net/Logic2018"><img class="center" src="images/Logic2018Screen.jpg"></a>
                     <p class="center">Logic 2018 is an educational game in which students solve symbolic logical derivations. The game is currently a command line game with an alpha build available <a href="http://groupstack.net/Logic2018">here</a><br>You can also check out the games source code on <a href="https://github.com/Fizzizist/Logic2018">GitHub</a></p>
                 </div>
                 <div class="col-lg-6">
