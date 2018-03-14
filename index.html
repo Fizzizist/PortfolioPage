@@ -3,19 +3,37 @@
         <link rel="icon" type="image/png"
  href="favicon.png">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="quotes-style.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
-            window.location = "#home";
+            $(document).ready(function(){
+                $.getJSON("http://groupstack.net/testing/", function(json){
+                    $("#quote").html("<i id='quote' class='fas fa-quote-left'></i> "+ json.quote + " <i class='fas fa-quote-right'></i><br>- " + json.author);
+                    $("#twitter-button").attr("href", "http://twitter.com/home/?status=" + json.quote + " - " + json.author + " %23TechQuotes");
+                });
+                $("#next-quote").on("click", function(){
+                    $.getJSON("http://groupstack.net/testing/", function(json){
+                        $("#quote").fadeOut("slow", function(){
+                            $("#quote").html("<i class='fas fa-quote-left'></i> "+ json.quote + " <i class='fas fa-quote-right'></i><br>- " + json.author);
+                            $("#twitter-button").attr("href", "http://twitter.com/home/?status=" + json.quote + " - " + json.author + " %23TechQuotes");
+                            $("#quote").fadeIn("slow");     
+                        });
+                       
+                    });
+                });
+            });
         </script>
     </head>
     
     <header>  
     <nav class="navbar navbar-fixed-top">
         <div id="_nav" class="row">
-            <div class="col-md-4"><a class="make-white" href="#home"><button class="btn"><b>Home</b></button></a></div>
-            <div class="col-md-4"><a class="make-white" href="#about"><button class="btn"><b>About</b></button></a></div>
-            <div class="col-md-4"><a class="make-white" href="#portfolio"><button class="btn"><b>Portfolio</b></button></a></div>
+            <div class="col-md-3"><a class="make-white" href="#home"><button class="btn"><b>Home</b></button></a></div>
+            <div class="col-md-3"><a class="make-white" href="#about"><button class="btn"><b>About</b></button></a></div>
+            <div class="col-md-3"><a class="make-white" href="#portfolio"><button class="btn"><b>Portfolio</b></button></a></div>
+            <div class="col-md-3"><a class="make-white" href="#main-quote-window"><button class="btn"><b>Quotes</b></button></a></div>
         </div>
     </nav>
     </header>
@@ -90,6 +108,15 @@
         </div>
         
         <!-- end of portfolio section -->
+        
+        <div id="main-quote-window" class="container-fluid">
+            <div id="quote-well" class="container-fluid">
+                <h1 id="quote">#quote</h1>
+            </div>
+            <button id="next-quote" class="btn btn-primary btn-block">Next Quote</button>
+        </div>
+        
+        <!-- end of Quotes section -->
         
         <div style="background-color: black; text-align: center;" class="container-fluid">
             <p class="make-white">Written and coded by <a href="#about">Peter Vlasveld</a></p>
