@@ -13,7 +13,7 @@
                     $("#quote").html("<i id='quote' class='fas fa-quote-left'></i> "+ json.quote + " <i class='fas fa-quote-right'></i><br>- " + json.author);
                     $("#twitter-button").attr("href", "http://twitter.com/home/?status=" + json.quote + " - " + json.author + " %23TechQuotes");
                 });
-                $("#next-quote").on("click", function(){
+                setInterval(function(){
                     $.getJSON("http://groupstack.net/testing/", function(json){
                         $("#quote").fadeOut("slow", function(){
                             $("#quote").html("<i class='fas fa-quote-left'></i> "+ json.quote + " <i class='fas fa-quote-right'></i><br>- " + json.author);
@@ -22,7 +22,7 @@
                         });
                        
                     });
-                });
+                }, 10000);
             });
         </script>
     </head>
@@ -113,7 +113,6 @@
             <div id="quote-well" class="container-fluid">
                 <h1 id="quote">#quote</h1>
             </div>
-            <button id="next-quote" class="btn btn-primary btn-block">Next Quote</button>
         </div>
         
         <!-- end of Quotes section -->
